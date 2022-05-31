@@ -1,0 +1,118 @@
+[user]
+    name = Filip Oskar Przybycien
+    email = fprzybycien@gmail.com
+
+[apply]
+    whitespace = nowarn
+[core]
+    pager = less -R
+[help]
+    autocorrect = 1
+[branch]
+    autosetupmerge = true
+[push]
+    default = upstream
+[rerere]
+    enabled = true
+[rebase]
+    autosquash = true
+[init]
+    defaultBranch = trunk
+[pull]
+    rebase = false
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[alias]
+    d = difftool
+[merge]
+    tool = vimdiff
+
+# colours
+
+[color]
+    ui = true
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = red
+
+
+# git kurwo
+
+[alias]
+    kurwa = status
+    cojestkurwa = diff
+    nabokkurwa = stash
+    zbokukurwa = stash apply
+
+    ogarnijkurwa = checkout
+    konarkurwa = branch
+
+    dodajkurwa = add
+    dodajkurwawszystko = add .
+    apdejtujkurwa = add -u
+    takkurwa = commit
+
+    sorrykurwa = commit --amend -m
+    ssijkurwa = pull
+    pchajkurwa = push
+
+    cofnijkurwa = reset HEAD --
+    zartowalem = restore
+
+    # BASIC REPO INFORMATION
+
+    ktotamkurwa = "!sh -c 'git log -i -1 --pretty=\"format::%an <%ae>\n\" --author=\"$1\"' -"
+    cotamkurwa = show -s --pretty='tformat::%h (%s, %ad)' --date=short
+    wielakurwa = "!sh -c 'git log -a --pretty=oneline | wc -l'"
+    wielaktokurwa = shortlog -sn
+
+    #WHAT WAS GOING ON, WHILE YOU WERE AWAY
+
+    conajebalo = !sh -c 'git fetch' && git log --oneline HEAD..origin/$1
+    conajebalomiszcza = !sh -c 'git fetch' && git log --oneline HEAD..origin/master
+    ktonajebal = !sh -c 'git shortlog HEAD..origin/$0'
+    ktonajebalmiszcza = !sh -c 'git shortlog HEAD..origin/master'
+
+    #TAGS
+
+    tagujkurwa = tag
+    tagikurwa = show-ref --tags
+    pchajtagikurwa = push --tags
+    tagikiedykurwa = !sh -c 'git tag "$0"_$(date "+%y-%m-%d_%H-%M-%S")'
+    ostatnitagkurwa = describe --abbrev=0 --tags
+    ogarnijostatnitagkurwa = !sh -c 'git checkout `git describe --abbrev=0 --tags`'
+
+    #IGNORING
+
+    ignorujkurwa = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
+    naprawbanykurwa = !git rm -r --cached . && git add . && git commit -m \"Just a .gitignore fix \"
+
+    # Ignore files only locally
+    ukryjkurwa = update-index --assume-unchanged
+    nieukrywajkurwa = update-index --no-assume-unchanged
+
+    #OTHER
+
+    # print aliases
+    obelgi = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | grep -v 'alias'| awk 'BEGIN { FS = \"=>\" }{ printf(\"%-20s=>%s\\n\", $1,$2)}'|sort
+
+    #Finds a filename in the git repository. Gives absolute location (from the git root).
+    szukajkurwa = !sh -c 'git ls-tree -r --name-only HEAD | grep --color $1' -
+
+    #Deletes orphaned remote branches (.git/refs/remotes/origin), clean up reflog and remove all untracked files
+    sprzatajkurwachate = !git remote prune origin && git gc && git clean -df

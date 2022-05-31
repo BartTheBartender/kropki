@@ -1,0 +1,87 @@
+# ui
+
+"ui.background" = { bg = "black" }
+"ui.background.separator" = { bg = "gray" }
+"ui.gutter" = { bg = "black" }
+
+"ui.cursor.primary" = { fg = "cyan", modifiers = ["reversed"] }
+"ui.cursor" = { fg = "light-magenta", modifiers = ["reversed"] }
+"ui.cursor.match" = { fg = "cyan" , modifiers = ["underlined"] }
+
+"ui.selection.primary" = { fg = "black", bg = "light-magenta" }
+"ui.selection" = { fg = "black", bg = "gray" }
+
+"ui.linenr" = { fg = "light-magenta", bg = "black" }
+"ui.linenr.selected" = { fg = "light-gray", bg = "light-magenta", modifiers = ["bold"]}
+
+"ui.statusline" = { fg = "black", bg = "cyan" }
+"ui.statusline.inactive" = { fg = 'light-gray', bg = 'gray' }
+
+"ui.help" = { fg = "light-gray", bg = "light-magenta" }
+"ui.popup" = { fg = "light-gray", bg = "light-magenta" }
+"ui.popup.info" = { fg = "light-gray", bg = "light-magenta" }
+"ui.window" = { fg = "gray", bg = "gray" }
+
+"ui.text" = "white"
+"ui.text.focus" = "light-gray"
+"ui.text.info" = "light-gray"
+"ui.virtual.whitespace" = { fg = "light-gray" }
+
+"ui.menu" = { fg = "cyan", bg = "black" }
+"ui.menu.selected" = { fg = "black", bg = "cyan" }
+
+"hint" = { fg = "light-magenta" }
+"info" = { fg = "blue" }
+"warning" = { fg = "yellow" }
+"error" = { fg = "red" }
+
+"diagnostic" = { fg = "light-magenta" }
+"diagnostic.hint" = { fg = "light-magenta" }
+"diagnostic.info" = { fg = "blue" }
+"diagnostic.warning" = { fg = "yellow" }
+"diagnostic.error" = { fg = "red" }
+
+# markup
+
+"markup.heading.marker" = "cyan"
+"markup.heading" = { fg = "light-red", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "light-yellow", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "red", modifiers = ["bold"] }
+"markup.list" = { fg = "light-gray" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "light-blue", modifiers = ["underlined"]}
+"markup.link.text" = { fg = "blue" }
+"markup.quote" = { fg = "light-red" }
+"markup.raw" = { fg = "light-magenta" }
+
+'diff.plus' = { fg = "green" }
+'diff.minus' = { fg = "red" }
+'diff.delta' = { fg = "yellow" }
+'diff.delta.moved' = { fg = "blue" }
+
+# syntax
+
+"keyword" = "light-yellow"
+"function" = "white"
+"function.macro" = "yellow"
+
+"variable" = "cyan"
+"variable.parameter" = "yellow"
+"variable.other" = "light-gray"
+"variable.builtin" = "yellow"
+
+"constant" = "light-red"
+"string" = "light-cyan"
+"type" = "blue"
+
+"comment" = { fg = "light-magenta", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "light-red", modifiers = ["italic"] }
+"namespace" = "light-red"
+"tag" = "light-red"
+"label" = "light-gray"
+
+"punctuation" = "light-gray"
+"punctuation.delimiter" = "light-gray"
+"operator" = "light-gray"

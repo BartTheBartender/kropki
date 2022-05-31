@@ -1,0 +1,5 @@
+#!/bin/sh
+HISTFILE="$HOME"/.config/zsh/history
+HISTSIZE=279936
+SAVEHIST=279936
+export PATH=$HOME/.cargo/bin:$PATH

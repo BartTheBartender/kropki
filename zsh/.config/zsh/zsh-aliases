@@ -1,0 +1,16 @@
+# confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+# exa
+alias ls="exa -b --icons"
+alias ll="exa -lb --header --git --icons"
+alias la="exa -lb --header --git --icons --all"
+alias lt="exa -lb --header --git --icons --tree --level=2"
+
+# editor
+alias vi="hx"
+
+# paths
+alias obsidian="/Users/orhid/Library/Mobile\ Documents/iCloud~md~obsidian/Documents"
