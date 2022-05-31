@@ -1,24 +1,25 @@
 font:
   normal:
-    family: "Anonymice Nerd Font Mono"
+    family: "Hasklug Nerd Font Mono"
     style: Regular
   
     bold:
-      family: "Anonymice Nerd Font Mono"
+      family: "Hasklug Nerd Font Mono"
       style: Bold
   
     italic:
-      family: "Anonymice Nerd Font Mono"
+      family: "Hasklug Nerd Font Mono"
       style: Italic
   
     bold_italic:
-      family: "Anonymice Nerd Font Mono"
+      family: "Hasklug Nerd Font Mono"
       style: Bold Italic
 
-  size: 16
+  size: 14
   ligatures: true
 
 cursor:
   style:
     shape: Block
-    blinking: Never
+    blinking: On
+    blink_interval: 324

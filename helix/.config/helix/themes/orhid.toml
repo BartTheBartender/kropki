@@ -6,7 +6,7 @@
 
 "ui.cursor.primary" = { fg = "cyan", modifiers = ["reversed"] }
 "ui.cursor" = { fg = "light-magenta", modifiers = ["reversed"] }
-"ui.cursor.match" = { fg = "cyan" , modifiers = ["underlined"] }
+"ui.cursor.match" = { fg = "cyan" , modifiers = ["slow_blink", "underlined"] }
 
 "ui.selection.primary" = { fg = "black", bg = "light-magenta" }
 "ui.selection" = { fg = "black", bg = "gray" }
