@@ -53,3 +53,5 @@ zsh_add_plugin "hlissner/zsh-autopair"
 export EDITOR="helix"
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+
+orhfetch
