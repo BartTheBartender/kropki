@@ -17,4 +17,5 @@ alias obsidian="/Users/orhid/Library/Mobile\ Documents/iCloud~md~obsidian/Docume
 
 # cargo
 alias cozjebalem="cargo clippy -- -W clippy::pedantic -W clippy::nursery"
+alias naprawcozjebalem="cargo clippy --fix -- -W clippy::pedantic -W clippy::nursery"
 alias gdzieniebezpiecznie="cargo clippy -- -W clippy::unwrap_used -W clippy::expect_used"
