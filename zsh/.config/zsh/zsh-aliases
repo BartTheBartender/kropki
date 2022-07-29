@@ -14,3 +14,7 @@ alias vi="hx"
 
 # paths
 alias obsidian="/Users/orhid/Library/Mobile\ Documents/iCloud~md~obsidian/Documents"
+
+# cargo
+alias cozjebalem="cargo clippy -- -W clippy::pedantic -W clippy::nursery"
+alias gdzieniebezpiecznie="cargo clippy -- -W clippy::unwrap_used -W clippy::expect_used"
