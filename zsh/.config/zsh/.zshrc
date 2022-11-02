@@ -49,9 +49,4 @@ zsh_add_plugin "hlissner/zsh-autopair"
 # for more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # more completions https://github.com/zsh-users/zsh-completions
 
-# environment variables set everywhere
-export EDITOR="helix"
-export TERMINAL="alacritty"
-export BROWSER="firefox"
-
 orhfetch
