@@ -3,3 +3,6 @@ HISTFILE="$HOME"/.config/zsh/history
 HISTSIZE=279936
 SAVEHIST=279936
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export MACOSX_DEPLOYMENT_TARGET="13.2" # necessary to make luaJIT work
