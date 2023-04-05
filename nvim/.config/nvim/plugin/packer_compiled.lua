@@ -74,10 +74,16 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  hardmode = {
+    config = { "require('config.hardmode')" },
+    loaded = true,
+    path = "/Users/orhid/.local/share/nvim/site/pack/packer/start/hardmode",
+    url = "https://github.com/wikitopian/hardmode"
+  },
   ["hveitivangr.nvim"] = {
     loaded = true,
     path = "/Users/orhid/.local/share/nvim/site/pack/packer/start/hveitivangr.nvim",
-    url = "/Users/orhid/code/hveitivangr.nvim"
+    url = "https://github.com/orhid/hveitivangr.nvim"
   },
   ["impatient.nvim"] = {
     config = { "require('impatient')" },
@@ -158,18 +164,32 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/orhid/.local/share/nvim/site/pack/packer/start/vim-signify",
     url = "https://github.com/mhinz/vim-signify"
+  },
+  ["vim-visual-multi"] = {
+    config = { "require('config.multicursor')" },
+    loaded = true,
+    path = "/Users/orhid/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: neoformat
-time([[Config for neoformat]], true)
-require('config.neoformat')
-time([[Config for neoformat]], false)
+-- Config for: vim-visual-multi
+time([[Config for vim-visual-multi]], true)
+require('config.multicursor')
+time([[Config for vim-visual-multi]], false)
 -- Config for: nvim-lspconfig
 time([[Config for nvim-lspconfig]], true)
 require('config.lsp')
 time([[Config for nvim-lspconfig]], false)
+-- Config for: neoformat
+time([[Config for neoformat]], true)
+require('config.neoformat')
+time([[Config for neoformat]], false)
+-- Config for: hardmode
+time([[Config for hardmode]], true)
+require('config.hardmode')
+time([[Config for hardmode]], false)
 -- Config for: impatient.nvim
 time([[Config for impatient.nvim]], true)
 require('impatient')

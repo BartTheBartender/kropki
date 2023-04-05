@@ -2,6 +2,7 @@ local opt = vim.opt
 
 -- context
 opt.number = true
+opt.relativenumber = true
 opt.wildmenu = true
 opt.lazyredraw = true
 opt.showmatch = true
@@ -34,3 +35,15 @@ opt.hlsearch = true
 -- splits
 opt.splitright = true
 opt.splitbelow = true
+
+-- line numbering in insert
+vim.api.nvim_exec(
+  [[
+    augroup insertmodelinenumbering
+    autocmd!
+    au InsertEnter * :set norelativenumber
+    au InsertLeave * :set relativenumber
+    augroup END
+  ]],
+  false
+)

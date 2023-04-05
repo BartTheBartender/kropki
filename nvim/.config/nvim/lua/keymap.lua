@@ -1,11 +1,11 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 
 map('n', ';', ':', {})
 
 -- motion
-map('n', 'gl', '$', {})
-map('n', 'gh', '0', {})
-map('n', 'ge', 'G', {})
+map({'n','v'}, 'gl', '$', {})
+map({'n','v'}, 'gh', '0', {})
+map({'n','v'}, 'ge', 'G', {})
 
 -- selection
 map('n', 'c', 'cl', {}) 

@@ -24,14 +24,17 @@ return require('packer').startup({
   function(use)
     use { 'lewis6991/impatient.nvim', config = [[require('impatient')]] }
     use 'wbthomason/packer.nvim'
-    use 'tpope/vim-fugitive'
+
+    -- quality of life
     use { 'sbdchd/neoformat', config = [[require('config.neoformat')]] }
     use { "tpope/vim-commentary", event = "VimEnter" }
+    use { 'mg979/vim-visual-multi', config = [[require('config.multicursor')]] }
+    use { 'wikitopian/hardmode', config = [[require('config.hardmode')]] }
 
     -- appearance
     use 'norcalli/nvim-colorizer.lua'
-    -- use 'orhid/hveitivangr.nvim'
-    use '~/code/hveitivangr.nvim'
+    use 'orhid/hveitivangr.nvim'
+    -- use '~/code/hveitivangr.nvim' -- for development and debugging
 
     -- lualine
     use { 'kyazdani42/nvim-web-devicons', event = 'VimEnter' }
@@ -43,6 +46,7 @@ return require('packer').startup({
     
     -- git
     use 'mhinz/vim-signify'
+    use 'tpope/vim-fugitive'
 
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter',
