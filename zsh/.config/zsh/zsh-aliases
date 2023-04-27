@@ -10,7 +10,8 @@ alias la="exa -lb --header --git --icons --all"
 alias lt="exa -lb --header --git --icons --tree --level=2"
 
 # editor
-alias vi="hx"
+alias vi="nvim"
+alias vim="nvim"
 
 # paths
 alias obsidian="/Users/orhid/Library/Mobile\ Documents/iCloud~md~obsidian/Documents"
