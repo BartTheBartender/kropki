@@ -28,11 +28,9 @@ scrolling:
   auto_scroll: false
 
 shell:
-  program: /bin/zsh
+  program: /opt/homebrew/bin/tmux
   args:
-    - -l
-    - -c
-    - "tmux attach || tmux new -s 'main'"
+    - attach
 
 key_bindings:
   - { key: PageUp, action: ScrollPageUp }

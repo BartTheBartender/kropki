@@ -74,7 +74,7 @@ return require('packer').startup({
   end,
   config = {
     luarocks = {
-      python_cmd = '/usr/local/bin/python3.9', -- set the python command to use for running hererocks
+      python_cmd = '/usr/bin/python3', -- set the python command to use for running hererocks
     }
   }
 })

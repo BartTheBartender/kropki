@@ -18,6 +18,7 @@ opt.fo:remove('o')
 opt.termguicolors = true
 vim.cmd.colorscheme 'hveitivangr'
 require 'colorizer'.setup()
+
 --- whitespace
 opt.expandtab = true
 opt.shiftwidth = 2
