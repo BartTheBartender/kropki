@@ -58,6 +58,10 @@ return require('packer').startup({
 
     -- lsp
     use { 'neovim/nvim-lspconfig', config = [[require('config.lsp')]] }
+
+    -- markdown
+    use { 'orhid/goyo.vim', config = [[require('config.typewriter')]] }
+    use { 'junegunn/limelight.vim', config = [[require('config.typewriter')]] }
   
     -- agda
     use {

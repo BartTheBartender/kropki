@@ -5,7 +5,7 @@ require('lualine').setup {
     component_separators = '.',
     section_separators = '',
     disabled_filetypes = {
-      statusline = {},
+      statusline = {"goyo"},
       winbar = {},
     },
     ignore_focus = {},

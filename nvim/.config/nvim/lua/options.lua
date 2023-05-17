@@ -37,6 +37,10 @@ opt.hlsearch = true
 opt.splitright = true
 opt.splitbelow = true
 
+-- text
+opt.spelllang = "pl"
+opt.spellcapcheck = ""
+
 -- line numbering in insert
 vim.api.nvim_exec(
   [[

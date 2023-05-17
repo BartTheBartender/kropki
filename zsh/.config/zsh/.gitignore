@@ -2,5 +2,6 @@
 .zcompcache
 .zsh_history
 .zsh_sessions
+.zshenv
 history
 plugins/
