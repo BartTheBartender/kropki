@@ -31,6 +31,8 @@ end
 --   require'completion'.on_attach(client)
 -- end
 
+-- # rust
+
 lspconfig.rust_analyzer.setup({
   on_attach=on_attach,
   settings = {
@@ -71,3 +73,39 @@ vim.api.nvim_exec(
   false
 )
 
+-- # lua
+require'lspconfig'.lua_ls.setup {
+  on_attach=on_attach,
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'Lua 5.4',
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
+
+-- # haskell
+lspconfig.hls.setup({
+  on_attach=on_attach,
+  filetypes = { 'haskell', 'lhaskell', 'cabal' },
+})
+
+-- # R
+lspconfig.r_language_server.setup({
+  on_attach=on_attach,
+})
+
+-- # tex
+lspconfig.texlab.setup({
+  on_attach=on_attach,
+})
