@@ -65,7 +65,7 @@
     dodajkurwa = add
     dodajkurwawszystko = add .
     apdejtujkurwa = add -u
-    takkurwa = commit -mS
+    takkurwa = commit -S -m
 
     sorrykurwa = commit --amend -m
     ssijkurwa = pull
