@@ -43,18 +43,18 @@ lspconfig.rust_analyzer.setup({
         },
         prefix = "self",
       },
-      
+
       -- enable clippy on save
         checkOnSave = {
           command = "clippy",
         },
-      
+
       cargo = {
         buildScripts = {
           enable = true,
         },
       },
-      
+
       procMacro = {
         enable = true
       },
@@ -103,6 +103,21 @@ lspconfig.hls.setup({
 -- # R
 lspconfig.r_language_server.setup({
   on_attach=on_attach,
+})
+
+-- # python
+lspconfig.pylsp.setup({
+  on_attach=on_attach,
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 96
+        }
+      }
+    }
+  }
 })
 
 -- # tex

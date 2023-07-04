@@ -1,13 +1,13 @@
 # confirm before overwriting something
-alias cp="cp -i"
-alias mv='mv -i'
+alias cp="cp -ivp"
+alias mv='mv -iv'
 alias rm='rm -i'
 
 # exa
 alias ls="exa -b --icons"
-alias ll="exa -lb --header --git --icons"
-alias la="exa -lb --header --git --icons --all"
-alias lt="exa -lb --header --git --icons --tree --level=2"
+alias ll="exa -lb --header --git --icons --group-directories-first"
+alias la="exa -lb --header --git --icons --all --group-directories-first"
+alias lt="exa -lb --header --git --icons --tree --level=2 --group-directories-first"
 
 # editor
 alias vim="nvim"

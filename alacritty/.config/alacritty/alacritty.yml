@@ -32,6 +32,11 @@ shell:
   args:
     - attach
 
+bell:
+  command:
+    program: afplay
+    args: ["/System/Library/Sounds/Pop.aiff"]
+
 key_bindings:
   - { key: PageUp, action: ScrollPageUp }
   - { key: PageDown, action: ScrollPageDown }

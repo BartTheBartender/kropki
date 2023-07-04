@@ -1,11 +1,13 @@
 [user]
     name = Filip Øskar Łanecki
     email = 9296944+orhid@users.noreply.github.com
-
+	  signingkey = C0EEE013FAF584E0
+[credential]
+	  helper = osxkeychain
 [apply]
     whitespace = nowarn
 [core]
-    pager = less -R
+    pager = bat
 [help]
     autocorrect = 1
 [branch]
@@ -28,6 +30,7 @@
     d = difftool
 [merge]
     tool = vimdiff
+
 
 # colours
 
@@ -55,66 +58,38 @@
 
 [alias]
     kurwa = status
-    cojestkurwa = diff
-    nabokkurwa = stash
-    zbokukurwa = stash apply
+    cojest = diff
+    nabok = stash
+    zboku = stash apply
 
-    ogarnijkurwa = checkout
-    konarkurwa = branch
+    ogarnij = checkout
+    konar = branch
 
     dodajkurwa = add
     dodajkurwawszystko = add .
     apdejtujkurwa = add -u
-    takkurwa = commit -S -m
 
-    sorrykurwa = commit --amend -m
-    ssijkurwa = pull
-    pchajkurwa = push
+    takkurwa = commit -S -m
+    zartowalem = commit --amend -S -m
+
+    ssij = pull
+    nakurwiaj = push
+    nakurwiajnowe = !sh -c 'CURRENT=`git branch --show-current` && git push --set-upstream origin $CURRENT' --
 
     cofnijkurwa = reset HEAD --
-    zartowalem = restore
+    pochuju = restore
 
-    # BASIC REPO INFORMATION
+    # co się działo, jak mnie nie było
 
-    ktotamkurwa = "!sh -c 'git log -i -1 --pretty=\"format::%an <%ae>\n\" --author=\"$1\"' -"
-    cotamkurwa = show -s --pretty='tformat::%h (%s, %ad)' --date=short
-    wielakurwa = "!sh -c 'git log -a --pretty=oneline | wc -l'"
-    wielaktokurwa = shortlog -sn
+    cotamkurwa = !sh -c 'git fetch' && git log --oneline HEAD..origin/$1
+    ktotamkurwa = !sh -c 'git shortlog HEAD..origin/$0'
 
-    #WHAT WAS GOING ON, WHILE YOU WERE AWAY
+    # other
 
-    conajebalo = !sh -c 'git fetch' && git log --oneline HEAD..origin/$1
-    conajebalomiszcza = !sh -c 'git fetch' && git log --oneline HEAD..origin/master
-    ktonajebal = !sh -c 'git shortlog HEAD..origin/$0'
-    ktonajebalmiszcza = !sh -c 'git shortlog HEAD..origin/master'
-
-    #TAGS
-
-    tagujkurwa = tag
-    tagikurwa = show-ref --tags
-    pchajtagikurwa = push --tags
-    tagikiedykurwa = !sh -c 'git tag "$0"_$(date "+%y-%m-%d_%H-%M-%S")'
-    ostatnitagkurwa = describe --abbrev=0 --tags
-    ogarnijostatnitagkurwa = !sh -c 'git checkout `git describe --abbrev=0 --tags`'
-
-    #IGNORING
-
-    ignorujkurwa = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
-    naprawbanykurwa = !git rm -r --cached . && git add . && git commit -m \"Just a .gitignore fix \"
-
-    # Ignore files only locally
-    ukryjkurwa = update-index --assume-unchanged
-    nieukrywajkurwa = update-index --no-assume-unchanged
-
-    #OTHER
     # archive branch
-  majonez = !sh -c 'CURRENT=`git branch --show-current` && git checkout $1 && git tag archive/\"$1\" && git push origin archive/\"$1\" && git checkout $CURRENT && git branch -d $1 && git push origin --delete' $1--
+    majonez = !sh -c 'CURRENT=`git branch --show-current` && git checkout $1 && git checkout $CURRENT && git branch -d $1 && git push origin --delete $1' --
 
     # print aliases
     obelgi = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | grep -v 'alias'| awk 'BEGIN { FS = \"=>\" }{ printf(\"%-20s=>%s\\n\", $1,$2)}'|sort
-
-    #Finds a filename in the git repository. Gives absolute location (from the git root).
-    szukajkurwa = !sh -c 'git ls-tree -r --name-only HEAD | grep --color $1' -
-
-    #Deletes orphaned remote branches (.git/refs/remotes/origin), clean up reflog and remove all untracked files
-    sprzatajkurwachate = !git remote prune origin && git gc && git clean -df
+[commit]
+	gpgsign = true

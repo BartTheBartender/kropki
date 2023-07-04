@@ -8,7 +8,6 @@ map({'n','v'}, 'gh', '0', {})
 map({'n','v'}, 'ge', 'G', {})
 
 -- selection
-map('n', 'c', 'cl', {}) 
 map('n', 's', 'V', {})
 map('v', 's', ':s', {})
-map('n', '%', 'ggVG', {}) 
+map('n', '%', 'ggVG', {})
