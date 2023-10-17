@@ -1,13 +1,15 @@
 [user]
     name = Filip Øskar Łanecki
     email = 9296944+orhid@users.noreply.github.com
-	  signingkey = C0EEE013FAF584E0
+	  signingkey = 16A93F17ED87D9D8
 [credential]
 	  helper = osxkeychain
+[commit]
+	  gpgsign = true
 [apply]
     whitespace = nowarn
-[core]
-    pager = bat
+; [core]
+;     pager = bat
 [help]
     autocorrect = 1
 [branch]
@@ -25,9 +27,7 @@
 [diff]
     tool = vimdiff
 [difftool]
-    prompt = false
-[alias]
-    d = difftool
+    ; prompt = false
 [merge]
     tool = vimdiff
 
@@ -91,5 +91,3 @@
 
     # print aliases
     obelgi = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | grep -v 'alias'| awk 'BEGIN { FS = \"=>\" }{ printf(\"%-20s=>%s\\n\", $1,$2)}'|sort
-[commit]
-	gpgsign = true

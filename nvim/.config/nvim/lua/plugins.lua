@@ -34,6 +34,7 @@ return require('packer').startup({
     -- appearance
     use 'norcalli/nvim-colorizer.lua'
     use 'orhid/hveitivangr.nvim'
+    use 'sainnhe/everforest'
     -- use '~/code/hveitivangr.nvim' -- for development and debugging
 
     -- lualine
@@ -43,7 +44,7 @@ return require('packer').startup({
       event = 'VimEnter',
       config = [[require('config.statusline')]],
     }
-    
+
     -- git
     use 'mhinz/vim-signify'
     use 'tpope/vim-fugitive'
@@ -62,14 +63,14 @@ return require('packer').startup({
     -- markdown
     use { 'orhid/goyo.vim', config = [[require('config.typewriter')]] }
     use { 'junegunn/limelight.vim', config = [[require('config.typewriter')]] }
-  
+
     -- agda
     use {
       'ashinkarov/nvim-agda',
       ft = {'agda'},
       rocks = {'luautf8'},
     }
-  
+
     -- automatically set up configuration after cloning packer.nvim
     -- should always be at the end after all plugins
     if packer_bootstrap then

@@ -7,7 +7,7 @@ local on_attach = function(_, bufnr)
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings.
-  local opts = { buffer = bufnr, noremap = true, silent = true }
+   local opts = { buffer = bufnr, noremap = true, silent = true }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
   vim.keymap.set('n', '<leader>k', vim.lsp.buf.hover, opts)
@@ -74,7 +74,7 @@ vim.api.nvim_exec(
 )
 
 -- # lua
-require'lspconfig'.lua_ls.setup {
+lspconfig.lua_ls.setup {
   on_attach=on_attach,
   settings = {
     Lua = {
@@ -86,6 +86,7 @@ require'lspconfig'.lua_ls.setup {
       },
       workspace = {
         library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
       },
       telemetry = {
         enable = false,
@@ -122,5 +123,15 @@ lspconfig.pylsp.setup({
 
 -- # tex
 lspconfig.texlab.setup({
+  on_attach=on_attach,
+})
+
+-- # html/css
+
+lspconfig.html.setup({
+  on_attach=on_attach,
+})
+
+lspconfig.cssls.setup({
   on_attach=on_attach,
 })
