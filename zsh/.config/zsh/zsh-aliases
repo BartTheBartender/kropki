@@ -3,6 +3,9 @@ alias cp="cp -ivp"
 alias mv='mv -iv'
 alias rm='rm -i'
 
+# fun stuff
+alias zahajsdziekana="sudo"
+
 # exa
 alias ls="exa -b --icons"
 alias ll="exa -lb --header --git --icons --group-directories-first"
