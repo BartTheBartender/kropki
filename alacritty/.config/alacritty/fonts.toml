@@ -1,0 +1,24 @@
+[cursor.style]
+blink_interval = 324
+blinking = "On"
+shape = "Block"
+
+[font]
+ligatures = true
+size = 14
+
+[font.normal]
+family = "Hasklug Nerd Font Mono"
+style = "Regular"
+
+[font.normal.bold]
+family = "Hasklug Nerd Font Mono"
+style = "Bold"
+
+[font.normal.bold_italic]
+family = "Hasklug Nerd Font Mono"
+style = "Bold Italic"
+
+[font.normal.italic]
+family = "Hasklug Nerd Font Mono"
+style = "Italic"
