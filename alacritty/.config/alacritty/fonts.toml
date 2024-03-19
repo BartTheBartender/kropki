@@ -1,24 +1,29 @@
+[cursor]
+blink_interval = 576
+blink_timeout = 0
+vi_mode_style = {shape = "Block", blinking = "Off"}
+
 [cursor.style]
-blink_interval = 324
-blinking = "On"
 shape = "Block"
+blinking = "On"
 
 [font]
-ligatures = true
+# ligatures = true
 size = 14
 
 [font.normal]
 family = "Hasklug Nerd Font Mono"
 style = "Regular"
 
-[font.normal.bold]
+
+[font.bold]
 family = "Hasklug Nerd Font Mono"
 style = "Bold"
 
-[font.normal.bold_italic]
-family = "Hasklug Nerd Font Mono"
-style = "Bold Italic"
-
-[font.normal.italic]
+[font.italic]
 family = "Hasklug Nerd Font Mono"
 style = "Italic"
+
+[font.bold_italic]
+family = "Hasklug Nerd Font Mono"
+style = "Bold Italic"

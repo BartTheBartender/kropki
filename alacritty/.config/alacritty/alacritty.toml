@@ -28,10 +28,11 @@ key = "Minus"
 mods = "Control"
 
 [scrolling]
-auto_scroll = false
-faux_multiplier = 0
-history = 7776
+history = 1296
 multiplier = 3
+
+[selection]
+save_to_clipboard = true
 
 [shell]
 args = ["attach"]
@@ -39,9 +40,13 @@ program = "/opt/homebrew/bin/tmux"
 
 [window]
 dynamic_title = true
-live_config_reload = true
-save_to_clipboard = true
 title = "alacritty"
+
+decorations = "Buttonless"
+opacity = 0.92
+blur = true
+
+option_as_alt = "OnlyRight"
 
 [window.dimensions]
 columns = 84
