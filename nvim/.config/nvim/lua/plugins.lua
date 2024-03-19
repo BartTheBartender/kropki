@@ -79,7 +79,7 @@ return require('packer').startup({
   end,
   config = {
     luarocks = {
-      python_cmd = '/usr/bin/python3', -- set the python command to use for running hererocks
+      python_cmd = '/opt/homebrew/bin/python3', -- set the python command to use for running hererocks
     }
   }
 })
