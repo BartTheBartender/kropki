@@ -43,7 +43,7 @@ dynamic_title = true
 title = "alacritty"
 
 decorations = "Buttonless"
-opacity = 0.92
+opacity = 0.9
 blur = true
 
 option_as_alt = "OnlyRight"
