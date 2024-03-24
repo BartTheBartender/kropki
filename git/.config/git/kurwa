@@ -1,0 +1,35 @@
+[alias]
+    kurwa = status
+    cojest = diff
+    nabok = stash
+    zboku = stash apply
+
+    ogarnij = checkout
+    konar = branch
+
+    dodajkurwa = add
+    dodajkurwawszystko = add .
+    apdejtujkurwa = add -u
+
+    takkurwa = commit -S -m
+    zartowalem = commit --amend -S -m
+
+    ssij = pull
+    nakurwiaj = push
+    nakurwiajnowe = !sh -c 'CURRENT=`git branch --show-current` && git push --set-upstream origin $CURRENT' --
+
+    cofnijkurwa = reset HEAD --
+    pochuju = restore
+
+    # co się działo, jak mnie nie było
+
+    cotamkurwa = !sh -c 'git fetch' && git log --oneline HEAD..origin/$1
+    ktotamkurwa = !sh -c 'git shortlog HEAD..origin/$0'
+
+    # other
+
+    # archive branch
+    majonez = !sh -c 'CURRENT=`git branch --show-current` && git checkout $1 && git checkout $CURRENT && git branch -d $1 && git push origin --delete $1' --
+
+    # print aliases
+    obelgi = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1 => \\2/' | grep -v 'alias'| awk 'BEGIN { FS = \"=>\" }{ printf(\"%-20s=>%s\\n\", $1,$2)}'|sort
