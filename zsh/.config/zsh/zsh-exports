@@ -1,11 +1,8 @@
 #!/bin/sh
 
-export MACOSX_DEPLOYMENT_TARGET="14.4" # necessary to make luaJIT work
-export PAGER='bat'
-
 HISTFILE="$HOME"/.config/zsh/history
-HISTSIZE=279936
-SAVEHIST=279936
+HISTSIZE=1296
+SAVEHIST=1296
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
