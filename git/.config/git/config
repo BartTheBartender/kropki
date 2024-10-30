@@ -27,12 +27,12 @@
 # config
 
 [init]
-  defaultBranch = trunk
+  defaultBranch = main
 [commit]
-  gpgsign = true
+	gpgSign = true
 
 # user
 
 [user]
-  name = Filip Øskar Łanecki
-  email = 9296944+orhid@users.noreply.github.com
+  name = Bartosz Furmanek
+  email = 126062736+BartTheBartender@users.noreply.github.com
