@@ -30,11 +30,11 @@
   defaultBranch = main
 	default = branch
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 # user
 
 [user]
   name = Bartosz Furmanek
   email = 126062736+BartTheBartender@users.noreply.github.com
-	signingkey = rsa3072/319888B6FDCB715A
+	signingkey = 319888B6FDCB715A
