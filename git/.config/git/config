@@ -28,8 +28,9 @@
 
 [init]
   defaultBranch = main
+	default = branch
 [commit]
-	gpgSign = true
+	gpgSign = false
 
 # user
 
