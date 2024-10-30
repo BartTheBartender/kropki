@@ -2,6 +2,7 @@
   path = colour
   path = kurwa
   path = local
+  path = user
 
 # settings
 
@@ -32,9 +33,3 @@
 [commit]
 	gpgsign = false
 
-# user
-
-[user]
-  name = Bartosz Furmanek
-  email = 126062736+BartTheBartender@users.noreply.github.com
-	signingkey = 319888B6FDCB715A
