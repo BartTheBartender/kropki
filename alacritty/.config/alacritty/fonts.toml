@@ -9,7 +9,7 @@ blinking = "On"
 
 [font]
 # ligatures = true
-size = 14
+size = 20
 
 [font.normal]
 family = "Hasklug Nerd Font Mono"

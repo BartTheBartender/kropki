@@ -1,4 +1,4 @@
-import = ["/Users/orhid/.config/alacritty/colours.toml", "/Users/orhid/.config/alacritty/fonts.toml"]
+import = ["/Users/bartoszfurmanek/.config/alacritty/colours.toml", "/Users/bartoszfurmanek/.config/alacritty/fonts.toml"]
 
 [bell.command]
 args = ["/System/Library/Sounds/Pop.aiff"]
@@ -28,7 +28,7 @@ key = "Minus"
 mods = "Control"
 
 [scrolling]
-history = 1296
+history = 10000
 multiplier = 3
 
 [selection]

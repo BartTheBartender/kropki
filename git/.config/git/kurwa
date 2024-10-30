@@ -11,7 +11,7 @@
     dodajkurwawszystko = add .
     apdejtujkurwa = add -u
 
-    takkurwa = commit -S -m
+    takkurwa = commit -m
     zartowalem = commit --amend -S -m
 
     ssij = pull
