@@ -6,13 +6,11 @@ return {
     -- require treesitter
     local config = require("nvim-treesitter.configs")
     config.setup({
-      -- languages to be parsed
-      ensure_installed = {"lua", "javascript", "c", "rust", "haskell", "python"},
+      -- enable installing parsers automatically
+      auto_install = true,
       -- enable highlighting and indents
       highlight = { enable = true },
-      indent = { enable = true }
+      indent = { enable = true },
     })
-  end
+  end,
 }
-
-
