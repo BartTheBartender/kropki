@@ -36,6 +36,11 @@ local plugins = {
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
     dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+
+  -- treesitter for AST building while coding
+  {
+    "nvim-treesitter/nvim-treesitter", build= ":TSUpdate"
   }
 }
 
@@ -52,3 +57,13 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', builtin.find_files, {})
 -- set <leader>fg for greping in files
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+
+-- require treesitter
+local config = require("nvim-treesitter.configs")
+config.setup({
+  -- languages to be parsed
+  ensure_installed = {"lua", "javascript", "c", "rust", "haskell", "python"},
+  -- enable highlighting and indents
+  highlight = { enable = true },
+  indent = { enable = true }
+})
