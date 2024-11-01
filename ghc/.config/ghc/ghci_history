@@ -1,0 +1,100 @@
+:l Main.hs 
+:l src/Main.hs 
+:l Main
+:l M
+main
+:l Main.hs 
+:l Main.hs 
+:r
+:r
+:l src/Main.hs 
+:l main
+main
+:l main
+:l Main.hs 
+:l src/Main.hs 
+:l main
+fixPoint sin pi
+pi
+fixPoint sin 1e-10
+fixPoint sin 0
+:r
+fixPoint sin 1
+:r
+:r
+2.4703e-320/1.000001
+2.4703e-320/1.0001
+2.4703e-320/asdasd
+fixPoint (/1.0001)
+fixPoint (*1.0001)
+fixPoint (*1.0000001)
+fixPoint (*1.000000000001)
+fixPoint (*1.01)
+fixPoint (+100000000000)
+fixPoint (+10000)
+fixPoint (*2)
+fixPoint (exp)
+fixPoint (+200)
+fixPoint (+2)
+:r
+fixPoint (+2)
+:r
+:r
+:t trace
+:r
+:t trace
+fixPoint(+2)
+fixPoint(*2)
+:r
+fixPoint(*2)
+fixPoint(*2)
+fixPoint(**2)
+fixPoint id
+fixPoint (+2)
+fixPoint exp
+fixPoint cos
+fixPoint sin
+:r
+:r
+:t sin
+fixPoint sin
+:r
+:r
+:r
+cos y
+sin y
+cos y
+y
+:r
+fixPoint 2
+:l fix.hs 
+:r
+jjjjjj
+:t fix
+:r
+:t fix
+:r
+:t fix
+:r
+:t fix
+:r
+:t fix
+import Control.Monad.Fix
+:r
+:t fix
+:r
+:t fix
+:r
+fix id
+:t fix
+:t fic
+:r
+fix id
+:r
+:l fix.hs 
+import Deepseq
+import DeepSeq.Force
+:t force
+:t uncurry
+:t curry
+toInt z
