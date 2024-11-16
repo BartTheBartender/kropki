@@ -19,7 +19,10 @@ return {
           "lua_ls",
           "clangd",
           "rust_analyzer",
-          "pylyzer",
+          -- latex
+          "texlab",
+
+          -- "pylyzer",
         },
       })
     end,
@@ -36,7 +39,10 @@ return {
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
       lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-      lspconfig.pylyzer.setup({ capabilities = capabilities })
+
+
+      lspconfig.texlab.setup({ capabilities = capabilities })
+      -- lspconfig.pylyzer.setup({ capabilities = capabilities })
 
       -- keymaps for interacting with lsp
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
