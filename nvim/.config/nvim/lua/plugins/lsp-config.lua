@@ -20,9 +20,10 @@ return {
           "clangd",
           "rust_analyzer",
           -- latex
-          "texlab",
+          -- "texlab",
 
           -- "pylyzer",
+          "marksman"
         },
       })
     end,
@@ -41,7 +42,8 @@ return {
       lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 
 
-      lspconfig.texlab.setup({ capabilities = capabilities })
+      -- lspconfig.texlab.setup({ capabilities = capabilities })
+      lspconfig.marksman.setup({ capabilities = capabilities })
       -- lspconfig.pylyzer.setup({ capabilities = capabilities })
 
       -- keymaps for interacting with lsp
