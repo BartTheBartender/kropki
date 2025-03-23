@@ -1,0 +1,12 @@
+[1,2..]
+f 123
+f 4
+:l monada.hs 
+:l monada.hs 
+main
+:l monada.hs 
+main
+:l monada.hs 
+:l monada.hs 
+exit
+print "Hi"

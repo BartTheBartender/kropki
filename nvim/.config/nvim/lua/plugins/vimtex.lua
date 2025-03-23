@@ -15,7 +15,7 @@ return {
 
     -- Enable Vimtex Treesitter support for LaTeX
     vim.g.vimtex_syntax_enabled = 1
-    vim.g.vimtex_treesitter_enabled = 1
+    -- vim.g.vimtex_treesitter_enabled = 1
 
     -- Configure latexmk (optional)
     vim.g.vimtex_compiler_method = "latexmk"
@@ -27,7 +27,7 @@ return {
         "-interaction=nonstopmode",
         "-file-line-error",
         "-synctex=1",
-        "-outdir=./build",  -- Explicitly set the output directory
+        "-output-directory=.build",  -- Explicitly set the output directory
       },
       continuous_mode = 1, -- Enable continuous mode
     }
